@@ -1,0 +1,28 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  {% set collection = page.collection() %}
+
+  <div class="header header--collapsed"></div>
+
+  <div class="content">
+    <ul class="collection">
+      {% for p in page.collection %}
+        <li class="collection__item">
+          <h4 class="collection__title"><a href="{{ p.url }}">{{ p.title }}</a></h4>
+          <div class="collection__details">
+            <div class="collection__preface">
+              {{ p.header.preface|markdown }}
+            </div>
+            <p><small><strong>{{ p.date|date("F jS") }},</strong> {{ p.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {# Render the pagination list #}
+    {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    {% endif %}
+  </div>
+{% endblock %}

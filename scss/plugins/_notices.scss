@@ -1,0 +1,25 @@
+.notices {
+
+  &.quote p {
+    font-family: $font--heading;
+    max-width: 54rem;
+    border-left: 2px solid $color--blue;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &.attribution p {
+    text-align: right;
+    font-size: $font--small;
+    max-width: 54rem;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: 40rem) {
+    p {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+}

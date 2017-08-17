@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <div class="header">
+    <h1 class="title" data-shadow-text="{{ page.title }}">{{ page.title }}</h1>
+    {{ page.header.preface|markdown }}
+  </div>
+
+  <div class="content">
+    <p class="article__time"><small><strong>{{ page.date|date("F jS") }},</strong> {{ page.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
+    <div class="content__main">
+      {{ page.content }}
+    </div>
+    <hr>
+  </div>
+{% endblock %}

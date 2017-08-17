@@ -1,0 +1,40 @@
+.content {
+  margin-bottom: 4rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  hr,
+  code {
+    @include container();
+  }
+
+  hr {
+    max-width: 30rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  &__main {
+    p {
+      text-indent: 1rem;
+    }
+
+    hr {
+      max-width: 3.5rem;
+      border-bottom-style: dotted;
+      border-bottom-width: 4px;
+      padding: 0;
+    }
+  }
+
+  blockquote p {
+    max-width: 80rem;
+  }
+}

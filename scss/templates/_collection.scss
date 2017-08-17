@@ -1,0 +1,29 @@
+.collection {
+  margin-top: 3rem;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 2rem 0;
+    margin-left: 0;
+    border-bottom: 1px solid $color--lightgrey;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__details {
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__preface {
+    margin-bottom: 1rem;
+  }
+}

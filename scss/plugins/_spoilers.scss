@@ -1,0 +1,12 @@
+.md-spoiler {
+  @include container();
+
+  @media screen and (max-width: 40rem) {
+    margin: 2rem;
+  }
+
+  &__line {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

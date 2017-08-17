@@ -1,0 +1,12 @@
+.footer {
+  @include container();
+  text-align: center;
+
+  .back-to-top {
+    margin-bottom: 4rem;
+  }
+
+  .copyright {
+    color: $color--mediumgrey;
+  }
+}

@@ -1,0 +1,27 @@
+name: Thoughts
+version: 0.0.1
+description: "Thoughts is an extremely minimalistic blog theme"
+icon: empire
+author:
+  name: Thomas Threadgold
+  email: thomas@threadgold.nz
+  url: http://threadgold.nz
+homepage: https://github.com/Regaez/grav-theme-thoughts
+demo: http://thoughts.threadgold.nz
+keywords: thoughts, theme, blog, modern, fast, minimalist, responsive, html5, css3
+bugs: https://github.com/Regaez/grav-theme-thoughts/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+        type: toggle
+        label: Plugin status
+        highlight: 1
+        default: 1
+        options:
+            1: Enabled
+            0: Disabled
+        validate:
+            type: bool

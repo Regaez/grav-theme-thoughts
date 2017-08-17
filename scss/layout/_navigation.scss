@@ -1,0 +1,14 @@
+.navigation {
+  @include container();
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.5rem;
+
+  a {
+    display: inline-block;
+    margin: 0;
+    padding: 1rem 1rem 1rem 0;
+    text-decoration: none;
+    color: $color--blue;
+  }
+}

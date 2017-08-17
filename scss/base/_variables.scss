@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans:300,300i,700');
+
+$font--size1: 5.722rem;
+$font--size2: 4.578rem;
+$font--size3: 3.662rem;
+$font--size4: 2.93rem;
+$font--size5: 2.344rem;
+$font--size6: 1.875rem;
+$font--base: 1.5rem;
+$font--small: 1.2rem;
+
+$color--grey: #333;
+$color--blue: #107896;
+$color--lighterblue: #43abc9;
+$color--lightblue: #1496bb;
+$color--white: #fff;
+$color--offwhite: #fafafa;
+$color--mediumgrey: #ccc;
+$color--lightgrey: #eee;
+
+$color--spoiler: #ffebee;
+$color--selection: #b4d5fe;
+
+$font--body: unquote("'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif");
+$font--heading: unquote("'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif");
+$font--quote: unquote("'Amatic SC', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif");
+$font--code: unquote("Menlo, Monaco, 'Courier New', monospace");
+
+@mixin container {
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+@mixin text-underline-crop($background) {
+  text-shadow:  .03em 0 $background,
+                -.03em 0 $background,
+                0 .03em $background,
+                0 -.03em $background,
+                .06em 0 $background,
+                -.06em 0 $background,
+                .09em 0 $background,
+                -.09em 0 $background,
+                .12em 0 $background,
+                -.12em 0 $background,
+                .15em 0 $background,
+                -.15em 0 $background;
+}
+
+@mixin text-underline($color-bg, $color-text) {
+  background-image: linear-gradient($color-text, $color-text);
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-position: 0% 87%;
+}
+
+@mixin text-selection($selection) {
+  &::selection {
+    @include text-underline-crop($selection);
+
+    background: $selection;
+  }
+
+  &::-moz-selection {
+    @include text-underline-crop($selection);
+
+    background: $selection;
+  }
+}
+
+@mixin link-underline($background, $text, $selection){
+  @include text-underline-crop($background);
+  @include text-underline($background, $text);
+  @include text-selection($selection);
+
+  color: $text;
+  text-decoration: none;
+
+  &:after,
+  &:before {
+    text-shadow: none;
+  }
+
+  &:visited {
+    color: $text;
+  }
+}

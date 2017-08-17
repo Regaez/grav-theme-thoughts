@@ -1,0 +1,123 @@
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: $color--grey;
+  font-family: $font--body;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 40rem) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  body {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  margin-bottom: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.75em 0 .5rem;
+  font-weight: bold;
+  line-height: 1.42;
+  font-family: $font--heading;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $font--size1;
+}
+
+h2 {
+  font-size: $font--size2;
+}
+
+h3 {
+  font-size: $font--size3;
+}
+
+h4 {
+  font-size: $font--size4;
+}
+
+h5 {
+  font-size: $font--size5;
+}
+
+h6 {
+  font-size: $font--size6;
+}
+
+small {
+  font-size: $font--small;
+}
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+  display: block;
+}
+
+blockquote p {
+  font-size: $font--size3;
+  color: $color--blue;
+  margin: 1.5rem auto;
+  font-family: $font--quote;
+  text-align: center;
+}
+
+li {
+  margin-left: 4rem;
+}
+
+pre,
+code {
+  display: block;
+  font-family: $font--body
+}
+
+pre {
+  // background-color: $color--offwhite;
+  // font-size: $font--small;
+  overflow-x: scroll;
+  padding: 1.125em;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $color--lightgrey;
+}
+
+a:not(.no-underline) {
+  color: $color--lighterblue;
+  text-decoration: none;
+}
+
+a:not(.no-underline):hover,
+a:not(.no-underline):focus,
+a:not(.no-underline):active {
+  @include link-underline($color--white, $color--lightblue, $color--selection);
+  color: $color--lightblue;
+}
