@@ -14,7 +14,7 @@
             <div class="collection__preface">
               {{ p.header.preface|markdown }}
             </div>
-            <p><small><strong>{{ p.date|date("F jS") }},</strong> {{ p.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
+            <p><small><strong>{{ p.date|date("F jS Y") }},</strong> {{ p.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
           </div>
         </li>
       {% endfor %}

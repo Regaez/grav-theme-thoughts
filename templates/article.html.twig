@@ -7,7 +7,7 @@
   </div>
 
   <div class="content">
-    <p class="article__time"><small><strong>{{ page.date|date("F jS") }},</strong> {{ page.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
+    <p class="article__time"><small><strong>{{ page.date|date("F jS Y") }},</strong> {{ page.content|readingtime({'format': '{minutes_short_count} {minutes_text}'}) }}</small></p>
     <div class="content__main">
       {{ page.content }}
     </div>
