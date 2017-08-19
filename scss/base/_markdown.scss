@@ -117,7 +117,10 @@ a:not(.no-underline) {
 
 a:not(.no-underline):hover,
 a:not(.no-underline):focus,
-a:not(.no-underline):active {
+a:not(.no-underline):active,
+.underline:hover,
+.underline:focus,
+.underline:active {
   @include link-underline($color--white, $color--lightblue, $color--selection);
   color: $color--lightblue;
 }
