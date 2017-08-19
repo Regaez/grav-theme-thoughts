@@ -1,0 +1,1 @@
+sass scss/thoughts.scss:css/thoughts.min.css --style=compressed --sourcemap=none --no-cache
